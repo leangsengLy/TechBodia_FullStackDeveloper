@@ -1,46 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\TUF\\source\\repos\\Project_API_Note\\",
+  "WorkspaceRootPath": "D:\\TechBodia_FullStackDeveloper\\Project_API_Note\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{092E5ADE-4A61-4BCA-B3C8-6065C5B9508E}|Project_API_Note\\Project_API_Note.csproj|c:\\users\\tuf\\source\\repos\\project_api_note\\project_api_note\\migrations\\20250929151253_change to upper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{092E5ADE-4A61-4BCA-B3C8-6065C5B9508E}|Project_API_Note\\Project_API_Note.csproj|solutionrelative:project_api_note\\migrations\\20250929151253_change to upper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{092E5ADE-4A61-4BCA-B3C8-6065C5B9508E}|Project_API_Note\\Project_API_Note.csproj|d:\\techbodia_fullstackdeveloper\\project_api_note\\project_api_note\\controllers\\notescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{092E5ADE-4A61-4BCA-B3C8-6065C5B9508E}|Project_API_Note\\Project_API_Note.csproj|solutionrelative:project_api_note\\controllers\\notescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{092E5ADE-4A61-4BCA-B3C8-6065C5B9508E}|Project_API_Note\\Project_API_Note.csproj|c:\\users\\tuf\\source\\repos\\project_api_note\\project_api_note\\model\\lsnote.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{092E5ADE-4A61-4BCA-B3C8-6065C5B9508E}|Project_API_Note\\Project_API_Note.csproj|solutionrelative:project_api_note\\model\\lsnote.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{092E5ADE-4A61-4BCA-B3C8-6065C5B9508E}|Project_API_Note\\Project_API_Note.csproj|d:\\techbodia_fullstackdeveloper\\project_api_note\\project_api_note\\apicontroller\\notesapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{092E5ADE-4A61-4BCA-B3C8-6065C5B9508E}|Project_API_Note\\Project_API_Note.csproj|solutionrelative:project_api_note\\apicontroller\\notesapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{092E5ADE-4A61-4BCA-B3C8-6065C5B9508E}|Project_API_Note\\Project_API_Note.csproj|c:\\users\\tuf\\source\\repos\\project_api_note\\project_api_note\\migrations\\20250929150826_add new table noted.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{092E5ADE-4A61-4BCA-B3C8-6065C5B9508E}|Project_API_Note\\Project_API_Note.csproj|solutionrelative:project_api_note\\migrations\\20250929150826_add new table noted.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{092E5ADE-4A61-4BCA-B3C8-6065C5B9508E}|Project_API_Note\\Project_API_Note.csproj|d:\\techbodia_fullstackdeveloper\\project_api_note\\project_api_note\\data\\notesdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{092E5ADE-4A61-4BCA-B3C8-6065C5B9508E}|Project_API_Note\\Project_API_Note.csproj|solutionrelative:project_api_note\\data\\notesdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{092E5ADE-4A61-4BCA-B3C8-6065C5B9508E}|Project_API_Note\\Project_API_Note.csproj|c:\\users\\tuf\\source\\repos\\project_api_note\\project_api_note\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{092E5ADE-4A61-4BCA-B3C8-6065C5B9508E}|Project_API_Note\\Project_API_Note.csproj|d:\\techbodia_fullstackdeveloper\\project_api_note\\project_api_note\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{092E5ADE-4A61-4BCA-B3C8-6065C5B9508E}|Project_API_Note\\Project_API_Note.csproj|solutionrelative:project_api_note\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{092E5ADE-4A61-4BCA-B3C8-6065C5B9508E}|Project_API_Note\\Project_API_Note.csproj|c:\\users\\tuf\\source\\repos\\project_api_note\\project_api_note\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{092E5ADE-4A61-4BCA-B3C8-6065C5B9508E}|Project_API_Note\\Project_API_Note.csproj|solutionrelative:project_api_note\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{092E5ADE-4A61-4BCA-B3C8-6065C5B9508E}|Project_API_Note\\Project_API_Note.csproj|c:\\users\\tuf\\source\\repos\\project_api_note\\project_api_note\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{092E5ADE-4A61-4BCA-B3C8-6065C5B9508E}|Project_API_Note\\Project_API_Note.csproj|solutionrelative:project_api_note\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{092E5ADE-4A61-4BCA-B3C8-6065C5B9508E}|Project_API_Note\\Project_API_Note.csproj|c:\\users\\tuf\\source\\repos\\project_api_note\\project_api_note\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{092E5ADE-4A61-4BCA-B3C8-6065C5B9508E}|Project_API_Note\\Project_API_Note.csproj|solutionrelative:project_api_note\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{092E5ADE-4A61-4BCA-B3C8-6065C5B9508E}|Project_API_Note\\Project_API_Note.csproj|c:\\users\\tuf\\source\\repos\\project_api_note\\project_api_note\\project_api_note.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{092E5ADE-4A61-4BCA-B3C8-6065C5B9508E}|Project_API_Note\\Project_API_Note.csproj|solutionrelative:project_api_note\\project_api_note.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{092E5ADE-4A61-4BCA-B3C8-6065C5B9508E}|Project_API_Note\\Project_API_Note.csproj|c:\\users\\tuf\\source\\repos\\project_api_note\\project_api_note\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{092E5ADE-4A61-4BCA-B3C8-6065C5B9508E}|Project_API_Note\\Project_API_Note.csproj|solutionrelative:project_api_note\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{092E5ADE-4A61-4BCA-B3C8-6065C5B9508E}|Project_API_Note\\Project_API_Note.csproj|c:\\users\\tuf\\source\\repos\\project_api_note\\project_api_note\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{092E5ADE-4A61-4BCA-B3C8-6065C5B9508E}|Project_API_Note\\Project_API_Note.csproj|solutionrelative:project_api_note\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{092E5ADE-4A61-4BCA-B3C8-6065C5B9508E}|Project_API_Note\\Project_API_Note.csproj|d:\\techbodia_fullstackdeveloper\\project_api_note\\project_api_note\\model\\lsnote.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{092E5ADE-4A61-4BCA-B3C8-6065C5B9508E}|Project_API_Note\\Project_API_Note.csproj|solutionrelative:project_api_note\\model\\lsnote.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -55,131 +35,66 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "20250929151253_change to upper.cs",
-              "DocumentMoniker": "C:\\Users\\TUF\\source\\repos\\Project_API_Note\\Project_API_Note\\Migrations\\20250929151253_change to upper.cs",
-              "RelativeDocumentMoniker": "Project_API_Note\\Migrations\\20250929151253_change to upper.cs",
-              "ToolTip": "C:\\Users\\TUF\\source\\repos\\Project_API_Note\\Project_API_Note\\Migrations\\20250929151253_change to upper.cs",
-              "RelativeToolTip": "Project_API_Note\\Migrations\\20250929151253_change to upper.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAQwDIAAAAAAAAAAAAAAA==",
+              "Title": "NotesController.cs",
+              "DocumentMoniker": "D:\\TechBodia_FullStackDeveloper\\Project_API_Note\\Project_API_Note\\Controllers\\NotesController.cs",
+              "RelativeDocumentMoniker": "Project_API_Note\\Controllers\\NotesController.cs",
+              "ToolTip": "D:\\TechBodia_FullStackDeveloper\\Project_API_Note\\Project_API_Note\\Controllers\\NotesController.cs",
+              "RelativeToolTip": "Project_API_Note\\Controllers\\NotesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAwAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T15:12:53.519Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "20250929150826_add new table noted.cs",
-              "DocumentMoniker": "C:\\Users\\TUF\\source\\repos\\Project_API_Note\\Project_API_Note\\Migrations\\20250929150826_add new table noted.cs",
-              "RelativeDocumentMoniker": "Project_API_Note\\Migrations\\20250929150826_add new table noted.cs",
-              "ToolTip": "C:\\Users\\TUF\\source\\repos\\Project_API_Note\\Project_API_Note\\Migrations\\20250929150826_add new table noted.cs",
-              "RelativeToolTip": "Project_API_Note\\Migrations\\20250929150826_add new table noted.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAABbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T15:08:27.222Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\TUF\\source\\repos\\Project_API_Note\\Project_API_Note\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "Project_API_Note\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\TUF\\source\\repos\\Project_API_Note\\Project_API_Note\\ApplicationDbContext.cs",
-              "RelativeToolTip": "Project_API_Note\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T14:49:38.794Z",
+              "WhenOpened": "2025-09-29T16:46:12.811Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "LSNOTE.cs",
-              "DocumentMoniker": "C:\\Users\\TUF\\source\\repos\\Project_API_Note\\Project_API_Note\\Model\\LSNOTE.cs",
-              "RelativeDocumentMoniker": "Project_API_Note\\Model\\LSNOTE.cs",
-              "ToolTip": "C:\\Users\\TUF\\source\\repos\\Project_API_Note\\Project_API_Note\\Model\\LSNOTE.cs",
-              "RelativeToolTip": "Project_API_Note\\Model\\LSNOTE.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
+              "Title": "NotesApiController.cs",
+              "DocumentMoniker": "D:\\TechBodia_FullStackDeveloper\\Project_API_Note\\Project_API_Note\\ApiController\\NotesApiController.cs",
+              "RelativeDocumentMoniker": "Project_API_Note\\ApiController\\NotesApiController.cs",
+              "ToolTip": "D:\\TechBodia_FullStackDeveloper\\Project_API_Note\\Project_API_Note\\ApiController\\NotesApiController.cs",
+              "RelativeToolTip": "Project_API_Note\\ApiController\\NotesApiController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T14:42:59.408Z",
+              "WhenOpened": "2025-09-29T16:46:24.779Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NotesData.cs",
+              "DocumentMoniker": "D:\\TechBodia_FullStackDeveloper\\Project_API_Note\\Project_API_Note\\Data\\NotesData.cs",
+              "RelativeDocumentMoniker": "Project_API_Note\\Data\\NotesData.cs",
+              "ToolTip": "D:\\TechBodia_FullStackDeveloper\\Project_API_Note\\Project_API_Note\\Data\\NotesData.cs",
+              "RelativeToolTip": "Project_API_Note\\Data\\NotesData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T16:46:14.343Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\TUF\\source\\repos\\Project_API_Note\\Project_API_Note\\Program.cs",
+              "DocumentMoniker": "D:\\TechBodia_FullStackDeveloper\\Project_API_Note\\Project_API_Note\\Program.cs",
               "RelativeDocumentMoniker": "Project_API_Note\\Program.cs",
-              "ToolTip": "C:\\Users\\TUF\\source\\repos\\Project_API_Note\\Project_API_Note\\Program.cs",
+              "ToolTip": "D:\\TechBodia_FullStackDeveloper\\Project_API_Note\\Project_API_Note\\Program.cs",
               "RelativeToolTip": "Project_API_Note\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T14:23:36.844Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\TUF\\source\\repos\\Project_API_Note\\Project_API_Note\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "Project_API_Note\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\TUF\\source\\repos\\Project_API_Note\\Project_API_Note\\Properties\\launchSettings.json",
-              "RelativeToolTip": "Project_API_Note\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-09-29T14:22:14.464Z",
+              "WhenOpened": "2025-09-29T16:46:10.353Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\TUF\\source\\repos\\Project_API_Note\\Project_API_Note\\appsettings.json",
-              "RelativeDocumentMoniker": "Project_API_Note\\appsettings.json",
-              "ToolTip": "C:\\Users\\TUF\\source\\repos\\Project_API_Note\\Project_API_Note\\appsettings.json",
-              "RelativeToolTip": "Project_API_Note\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-09-29T14:22:04.809Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Project_API_Note",
-              "DocumentMoniker": "C:\\Users\\TUF\\source\\repos\\Project_API_Note\\Project_API_Note\\Project_API_Note.csproj",
-              "RelativeDocumentMoniker": "Project_API_Note\\Project_API_Note.csproj",
-              "ToolTip": "C:\\Users\\TUF\\source\\repos\\Project_API_Note\\Project_API_Note\\Project_API_Note.csproj",
-              "RelativeToolTip": "Project_API_Note\\Project_API_Note.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-09-29T14:21:41.126Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "WeatherForecastController.cs",
-              "DocumentMoniker": "C:\\Users\\TUF\\source\\repos\\Project_API_Note\\Project_API_Note\\Controllers\\WeatherForecastController.cs",
-              "RelativeDocumentMoniker": "Project_API_Note\\Controllers\\WeatherForecastController.cs",
-              "ToolTip": "C:\\Users\\TUF\\source\\repos\\Project_API_Note\\Project_API_Note\\Controllers\\WeatherForecastController.cs",
-              "RelativeToolTip": "Project_API_Note\\Controllers\\WeatherForecastController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Title": "LSNOTE.cs",
+              "DocumentMoniker": "D:\\TechBodia_FullStackDeveloper\\Project_API_Note\\Project_API_Note\\Model\\LSNOTE.cs",
+              "RelativeDocumentMoniker": "Project_API_Note\\Model\\LSNOTE.cs",
+              "ToolTip": "D:\\TechBodia_FullStackDeveloper\\Project_API_Note\\Project_API_Note\\Model\\LSNOTE.cs",
+              "RelativeToolTip": "Project_API_Note\\Model\\LSNOTE.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T14:20:48.843Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Users\\TUF\\source\\repos\\Project_API_Note\\Project_API_Note\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "Project_API_Note\\appsettings.Development.json",
-              "ToolTip": "C:\\Users\\TUF\\source\\repos\\Project_API_Note\\Project_API_Note\\appsettings.Development.json",
-              "RelativeToolTip": "Project_API_Note\\appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-09-29T14:24:51.125Z",
+              "WhenOpened": "2025-09-29T16:46:00.873Z",
               "EditorCaption": ""
             }
           ]
