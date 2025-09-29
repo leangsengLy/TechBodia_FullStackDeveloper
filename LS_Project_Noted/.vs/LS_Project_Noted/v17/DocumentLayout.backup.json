@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\TechBodia_FullStackDeveloper\\LS_Project_Noted\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{296B93B3-8E39-4AEB-A486-E1CE07BFA46C}|LS_Project_Noted\\LS_Project_Noted.csproj|d:\\techbodia_fullstackdeveloper\\ls_project_noted\\ls_project_noted\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{296B93B3-8E39-4AEB-A486-E1CE07BFA46C}|LS_Project_Noted\\LS_Project_Noted.csproj|solutionrelative:ls_project_noted\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{296B93B3-8E39-4AEB-A486-E1CE07BFA46C}|LS_Project_Noted\\LS_Project_Noted.csproj|d:\\techbodia_fullstackdeveloper\\ls_project_noted\\ls_project_noted\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{296B93B3-8E39-4AEB-A486-E1CE07BFA46C}|LS_Project_Noted\\LS_Project_Noted.csproj|solutionrelative:ls_project_noted\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "D:\\TechBodia_FullStackDeveloper\\LS_Project_Noted\\LS_Project_Noted\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "LS_Project_Noted\\Models\\ErrorViewModel.cs",
+              "ToolTip": "D:\\TechBodia_FullStackDeveloper\\LS_Project_Noted\\LS_Project_Noted\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "LS_Project_Noted\\Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T13:38:55.196Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\TechBodia_FullStackDeveloper\\LS_Project_Noted\\LS_Project_Noted\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "LS_Project_Noted\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\TechBodia_FullStackDeveloper\\LS_Project_Noted\\LS_Project_Noted\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "LS_Project_Noted\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T13:36:40.477Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
