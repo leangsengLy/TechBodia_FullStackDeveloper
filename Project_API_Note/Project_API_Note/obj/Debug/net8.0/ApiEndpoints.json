@@ -1,47 +1,16 @@
 [
   {
     "ContainingType": "Project_API_Note.ApiController.NotesApiController",
-    "Method": "List",
-    "RelativePath": "api/noted/list",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "filter",
-        "Type": "Project_API_Note.DataModel.NotesFilterDataModel",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Project_API_Note.ApiController.NotesApiController",
     "Method": "Create",
     "RelativePath": "api/notes/create",
-    "HttpMethod": "GET",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "Id",
-        "Type": "System.Int64",
-        "IsRequired": false
-      },
-      {
-        "Name": "Title",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Content",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "DateNow",
-        "Type": "System.DateTime",
-        "IsRequired": false
+        "Name": "model",
+        "Type": "Project_API_Note.DataModel.NotesDataModel",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -56,7 +25,23 @@
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.Int64",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Project_API_Note.ApiController.NotesApiController",
+    "Method": "List",
+    "RelativePath": "api/notes/list",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filter",
+        "Type": "Project_API_Note.DataModel.NotesFilterDataModel",
         "IsRequired": false
       }
     ],
@@ -66,29 +51,14 @@
     "ContainingType": "Project_API_Note.ApiController.NotesApiController",
     "Method": "Update",
     "RelativePath": "api/notes/update",
-    "HttpMethod": "GET",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "Id",
-        "Type": "System.Int64",
-        "IsRequired": false
-      },
-      {
-        "Name": "Title",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Content",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "DateNow",
-        "Type": "System.DateTime",
-        "IsRequired": false
+        "Name": "model",
+        "Type": "Project_API_Note.DataModel.NotesDataModel",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

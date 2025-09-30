@@ -1,4 +1,4 @@
-﻿namespace Project_API_Note.DataModel
+﻿namespace Project_API_Note.DataModel.Notes
 {
     public class NotesFilterDataModel
     {

@@ -9,5 +9,6 @@ namespace Project_API_Note
         {
         }
         public DbSet<LSNOTE> LSNOTEs { get; set; }
+        public DbSet<LSUSER_LOGIN> LSUSER_LOGINs { get; set; }
     }
 }

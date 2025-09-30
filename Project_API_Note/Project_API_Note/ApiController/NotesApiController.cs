@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Project_API_Note.Data;
-using Project_API_Note.DataModel;
+using Project_API_Note.DataModel.Notes;
 using Project_API_Note.Helper;
 
 namespace Project_API_Note.ApiController
@@ -13,25 +13,25 @@ namespace Project_API_Note.ApiController
         {
         }
        
-        [HttpGet("api/noted/list")]
-        public ActionResult List(NotesFilterDataModel filter)
+        [HttpPost(NotesHelper.URL.List)]
+        public override Task<ActionResult> List(NotesFilterDataModel filter)
         {
             return base.List(filter);
         }
 
-        [HttpGet(NotesHelper.URL.Create)]
-        public override ActionResult Create(NotesDataModel model)
+        [HttpPost(NotesHelper.URL.Create)]
+        public override  Task<ActionResult> Create(NotesDataModel model)
         {
             return base.Create(model);
         }
 
-        [HttpGet(NotesHelper.URL.Update)]
-        public override ActionResult Update(NotesDataModel model)
+        [HttpPost(NotesHelper.URL.Update)]
+        public override Task<ActionResult> Update(NotesDataModel model)
         {
             return base.Update(model);
         }
         [HttpGet(NotesHelper.URL.Delete)]
-        public override ActionResult Delete(long id)
+        public override Task<ActionResult> Delete(Guid id)
         {
             return base.Delete(id);
         }
