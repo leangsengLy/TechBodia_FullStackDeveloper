@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Project_API_Note.DataModel.Notes;
 using Project_API_Note.Dto;
 using Project_API_Note.Model;
-
+using System.Linq.Dynamic.Core;
 namespace Project_API_Note.Data
 {
     public static class NotesData
@@ -11,6 +11,17 @@ namespace Project_API_Note.Data
         public static async Task<List<NotesDto>> List(NotesFilterDataModel filter, ApplicationDbContext _db)
         {
             var list = await _db.LSNOTEs.ToListAsync();
+            if (!string.IsNullOrEmpty(filter.Search))
+            {
+                var searchText = filter.Search.Trim();
+                list = list.Where(s => s.TITLE.Contains(searchText) || s.CONTENT.Contains(searchText)).ToList();
+            }
+            list = list.Skip(filter.Pages - 1).Take(filter.Records).ToList();
+            if (!string.IsNullOrEmpty(filter.OrderBy))
+            {
+                filter.OrderBy += !string.IsNullOrEmpty(filter.OrderDir) ? $@" {filter.OrderDir} " : "";
+                list = list.AsQueryable().OrderBy(filter.OrderBy).ToList();
+            }
             return list.Select(s =>
             new NotesDto()
             {

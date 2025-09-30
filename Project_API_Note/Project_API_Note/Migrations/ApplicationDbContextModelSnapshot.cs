@@ -46,7 +46,33 @@ namespace Project_API_Note.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("LSNOTEs");
+                    b.ToTable("LSNOTE", (string)null);
+                });
+
+            modelBuilder.Entity("Project_API_Note.Model.LSUSER_LOGIN", b =>
+                {
+                    b.Property<Guid>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CREATED_AT")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("EMAIL")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("PASSWORD")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UPDATED_AT")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("LSUSER_LOGIN", (string)null);
                 });
 #pragma warning restore 612, 618
         }

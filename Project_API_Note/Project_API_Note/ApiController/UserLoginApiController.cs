@@ -13,26 +13,15 @@ namespace Project_API_Note.ApiController
         }
 
         [HttpPost(UserLoginHelper.URL.Register)]
-        public override  Task<ActionResult> Register(UserLoginDataModel model)
+        public override Task<ActionResult> Register(UserLoginDataModel model)
         {
             return base.Register(model);
         }
-        [HttpGet(UserLoginHelper.URL.IsLoginSuccess)]
+
+        [HttpPost(UserLoginHelper.URL.IsLoginSuccess)]
         public override Task<ActionResult> IsLoginSuccess(UserLoginDataModel model)
         {
             return base.IsLoginSuccess(model);
-        }
-
-        [HttpPost(UserLoginHelper.URL.Update)]
-        public override Task<ActionResult> Update(UserLoginDataModel model)
-        {
-            return base.Update(model);
-        }
-
-        [HttpGet(UserLoginHelper.URL.Delete)]
-        public override Task<ActionResult> Delete(Guid id)
-        {
-            return base.Delete(id);
         }
     }
 }

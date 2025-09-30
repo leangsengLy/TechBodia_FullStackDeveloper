@@ -1,5 +1,37 @@
 [
   {
+    "ContainingType": "Project_API_Note.ApiController.UserLoginApiController",
+    "Method": "IsLoginSuccess",
+    "RelativePath": "api/login/is_login_success",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Project_API_Note.DataModel.UserLoginDataModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Project_API_Note.ApiController.UserLoginApiController",
+    "Method": "Register",
+    "RelativePath": "api/login/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Project_API_Note.DataModel.UserLoginDataModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Project_API_Note.ApiController.NotesApiController",
     "Method": "Create",
     "RelativePath": "api/notes/create",
@@ -9,7 +41,7 @@
     "Parameters": [
       {
         "Name": "model",
-        "Type": "Project_API_Note.DataModel.NotesDataModel",
+        "Type": "Project_API_Note.DataModel.Notes.NotesDataModel",
         "IsRequired": true
       }
     ],
@@ -41,8 +73,8 @@
     "Parameters": [
       {
         "Name": "filter",
-        "Type": "Project_API_Note.DataModel.NotesFilterDataModel",
-        "IsRequired": false
+        "Type": "Project_API_Note.DataModel.Notes.NotesFilterDataModel",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -57,7 +89,7 @@
     "Parameters": [
       {
         "Name": "model",
-        "Type": "Project_API_Note.DataModel.NotesDataModel",
+        "Type": "Project_API_Note.DataModel.Notes.NotesDataModel",
         "IsRequired": true
       }
     ],

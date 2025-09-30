@@ -13,10 +13,17 @@ namespace Project_API_Note.ApiReponse
             this.StatusCode = statusCode;
         }
 
-        public LSApiResponse SetDetail(string Message = "")
+        public LSApiResponse SetDetail(dynamic Message)
         {
             this.apiResponse.Detail = Message;
             return this;
+
+        }
+        public LSApiResponse SetDetail(string Message="")
+        {
+            this.apiResponse.Detail = Message;
+            return this;
+
         }
     }
 }

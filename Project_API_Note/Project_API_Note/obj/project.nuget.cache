@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "OgWGYQe1jw4=",
+  "dgSpecHash": "aqSU8Cn6YVo=",
   "success": true,
   "projectFilePath": "D:\\TechBodia_FullStackDeveloper\\Project_API_Note\\Project_API_Note\\Project_API_Note.csproj",
   "expectedPackageFiles": [
@@ -67,6 +67,7 @@
     "C:\\Users\\TUF\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.35.0\\system.identitymodel.tokens.jwt.6.35.0.nupkg.sha512",
     "C:\\Users\\TUF\\.nuget\\packages\\system.io.filesystem.accesscontrol\\5.0.0\\system.io.filesystem.accesscontrol.5.0.0.nupkg.sha512",
     "C:\\Users\\TUF\\.nuget\\packages\\system.io.pipelines\\6.0.3\\system.io.pipelines.6.0.3.nupkg.sha512",
+    "C:\\Users\\TUF\\.nuget\\packages\\system.linq.dynamic.core\\1.6.8\\system.linq.dynamic.core.1.6.8.nupkg.sha512",
     "C:\\Users\\TUF\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
     "C:\\Users\\TUF\\.nuget\\packages\\system.memory.data\\1.0.2\\system.memory.data.1.0.2.nupkg.sha512",
     "C:\\Users\\TUF\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",

@@ -12,8 +12,8 @@ using Project_API_Note;
 namespace Project_API_Note.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250930001424_update-code-generate")]
-    partial class updatecodegenerate
+    [Migration("20250930034642_add")]
+    partial class add
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -49,7 +49,33 @@ namespace Project_API_Note.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("LSNOTEs");
+                    b.ToTable("LSNOTE", (string)null);
+                });
+
+            modelBuilder.Entity("Project_API_Note.Model.LSUSER_LOGIN", b =>
+                {
+                    b.Property<Guid>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CREATED_AT")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("EMAIL")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("PASSWORD")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UPDATED_AT")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("LSUSER_LOGIN", (string)null);
                 });
 #pragma warning restore 612, 618
         }

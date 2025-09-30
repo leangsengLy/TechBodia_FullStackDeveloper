@@ -16,8 +16,6 @@ namespace Project_API_Note.Helper
         public static class URL
         {
             public const string Register = "api/login/register";
-            public const string Update = "api/login/update";
-            public const string Delete = "api/login/delete";
             public const string IsLoginSuccess = "api/login/is_login_success";
         }
     }
