@@ -118,8 +118,7 @@
               "RelativeToolTip": "Project_API_Note\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-30T12:25:58.643Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-30T12:25:58.643Z"
             },
             {
               "$type": "Document",
@@ -143,8 +142,7 @@
               "RelativeToolTip": "Project_API_Note\\ApiController\\UserLoginApiController.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAuwBcAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-30T03:48:17.885Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-30T03:48:17.885Z"
             },
             {
               "$type": "Document",
@@ -156,8 +154,7 @@
               "RelativeToolTip": "Project_API_Note\\Controllers\\UserLoginController.cs",
               "ViewState": "AgIAACIAAAAAAAAAAAAIwC4AAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-30T03:31:40.706Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-30T03:31:40.706Z"
             },
             {
               "$type": "Document",
@@ -167,7 +164,7 @@
               "RelativeDocumentMoniker": "Project_API_Note\\Data\\UserLoginData.cs",
               "ToolTip": "D:\\TechBodia_FullStackDeveloper\\Project_API_Note\\Project_API_Note\\Data\\UserLoginData.cs",
               "RelativeToolTip": "Project_API_Note\\Data\\UserLoginData.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAwwBEAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAwwA0AAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-30T03:31:45.887Z",
               "EditorCaption": ""
