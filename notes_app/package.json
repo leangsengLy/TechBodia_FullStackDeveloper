@@ -10,7 +10,11 @@
   },
   "dependencies": {
     "@remixicon/vue": "^4.6.0",
+    "axios": "^1.12.2",
     "pinia": "^3.0.3",
+    "primeflex": "^4.0.0",
+    "primeicons": "^6.0.1",
+    "primevue": "^3.30.0",
     "vue": "^3.5.22",
     "vue-router": "^4.5.1"
   },

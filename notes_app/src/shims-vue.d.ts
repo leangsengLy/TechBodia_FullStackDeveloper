@@ -3,3 +3,5 @@ declare module '*.vue' {
   const component: DefineComponent<{}, {}, any>
   export default component
 }
+declare module 'primevue/config';
+declare module 'primevue/*';
