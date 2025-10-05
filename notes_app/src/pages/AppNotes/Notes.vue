@@ -25,24 +25,24 @@
                  <input type="text" v-if="!isShowTitle" v-model="title" placeholder="Your Title..." @keydown="onEnter" class="outline-none bg-[#a0a0a000] w-full h-[40px] text-white border-b-2"/>
                  <div :class="[content.title==title?'text-green-400 font-bold':'text-white']" class="cursor-pointer truncated-text" @click="selectContentTitle(title)" v-else>{{ title }}</div>
                </div> -->
-                 <v-dialog max-width="500">
-                    <template v-slot:activator="{ props: activatorProps  }">
-                         <div v-bind="activatorProps" class="flex text-white hover:opacity-70 text-[14px] gap-x-2 border cursor-pointer justify-center items-center rounded-lg h-[42px] " @click="addNewNotes">
+                 <v-dialog max-width="500" v-model="isShowPopup">
+                    <template v-slot:activator="{ props: TestShow  }">
+                         <div v-bind="TestShow" class="flex text-white hover:opacity-70 text-[14px] gap-x-2 border cursor-pointer justify-center items-center rounded-lg h-[42px] " @click="addNewNotes">
                             <RiAddCircleLine size="17"/> 
                             <p v-if="!ui.isCloseCollapse"> Add new notes</p>
                         </div>
                     </template>
 
-                    <template v-slot:default="{ isActive }">
+                    <template v-slot:default="{ TestShow }">
                          <div class="bg-white p-5 flex flex-col gap-y-4 rounded-lg">
-                        <h3 class="text-lg font-bold">New Notes</h3>
-                            <v-text-field clearable @click:clear="onClearTitle"  @keydown="handleKeydown"  persistent-clear label="Title" hint="Enter your title notes here." v-model="title" variant="outlined"></v-text-field>
+                        <h3 class="text-lg font-bold">New Notes</h3>    
+                            <v-text-field clearable @click:clear="onClearTitle" autofocus ref="myInput"  @keydown="handleKeydown"  persistent-clear label="Title" hint="Enter your title notes here." v-model="title" variant="outlined"></v-text-field>
                         <div class="flex justify-end gap-x-2">
-                            <div class="bg-green-400 px-4 py-2 rounded-lg text-white cursor-pointer" @click="()=>{isActive.value=false
+                            <div class="bg-green-400 px-4 py-2 rounded-lg text-white cursor-pointer" @click="()=>{isShowPopup=false
                                 AddNewTitle()
                             }">Save</div>
 
-                             <div class="bg-gray-200 px-4 py-2 rounded-lg text-black cursor-pointer" @click="()=>{isActive.value=false
+                             <div class="bg-gray-200 px-4 py-2 rounded-lg text-black cursor-pointer" @click="()=>{isShowPopup=false
                             }">Cancel</div>
                         </div>
                          </div>
@@ -82,7 +82,7 @@ import SideFooterContent from '../../components/SideFooterContent.vue';
 import SideHeaderContent from '../../components/SideHeaderContent.vue';
 import { useCounterStore } from '../../store/counter';
 import { useUIStore } from '../../store/ui_store';
-import { onMounted, ref } from 'vue';
+import { onMounted, ref, type HtmlHTMLAttributes } from 'vue';
 import LogoTechbo from '../../assets/Tecobodia_logo.jpg';
 import { useContentStore } from '../../store/content';
 import type Notes from "../../Type/TypeNotes";
@@ -90,30 +90,29 @@ import axios from 'axios';
 const count = useCounterStore();
 const ui = useUIStore();
 const content = useContentStore();
+const myInput = ref(null);
 const isShowPopup = ref<boolean>(false);
 const isSuccess = ref<boolean>();
-const activatorProps = ref<boolean>(false);
 const title = ref<string>("");
 const error = ref<string>("");
 const msg = ref<string>("");
 const loading = ref<boolean>(false);
 const notes = ref<Notes[]>();
 const isShowTitle = ref<boolean>(false);
-const isActive = ref<boolean>(false);
 const selectContentTitle=(notes:Notes)=>{
     content.setNote(notes);
 }
 const AddNewTitle=async()=>{
     isSuccess.value = await content.setTitle(title.value);
     msg.value = getMessage(isSuccess.value);
+    isShowPopup.value = false;
 }
 const getMessage = (isSuccess:boolean):string=>{
     return isSuccess?"Create noted successfully":"Fail to create notes.";
 }
 const handleKeydown = async (event:KeyboardEvent)=>{
     if(event.key === "Enter" && title.value!==""){
-         isActive.value = false;
-         activatorProps.value = false;
+         isShowPopup.value = false;
         isSuccess.value = await content.setTitle(title.value);
         msg.value = getMessage(isSuccess.value);
     }
@@ -149,6 +148,9 @@ onMounted(async () => {
 const addNewNotes=()=>{
     isShowPopup.value = true;
     title.value = "";
+    setTimeout(() => {
+       console.log(myInput.value.focus());
+    }, 100);    
     // isShowTitle.value = false;
 }
 const onCLickCloseNavLeft=()=>{

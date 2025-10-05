@@ -1,12 +1,17 @@
 <template>
     <div class="h-[60px] w-full bg-[#f3f4f6] flex items-center justify-between px-6">
-        <div class="font-bold text-[15px] flex gap-x-2 items-center">
+        <div class=" text-[15px] flex gap-x-3 items-start">
           
-            <div>{{ content.notes.title ?? "..."}} </div>
-            <RiDeleteBinLine size="18" color="red" class="cursor-pointer" @click="onDeleteNotes" v-if="content.notes.title!=undefined"/>
+            <div>
+                <p class="font-bold">{{ content.notes.title ?? "..."}}</p>
+                <p class="text-[12px]" v-if="content.notes.title!=undefined">{{ moment().format('MMMM DD, YYYY') }}</p> 
+            </div>
+             <RiDeleteBinLine size="14" color="red" class="cursor-pointer mt-1" @click="onDeleteNotes" v-if="content.notes.title!=undefined"/>
+
+           
         </div>
         <div>
-            <RiMoreFill size="18" className="my-icon" />
+            <!-- <RiMoreFill size="18" className="my-icon" /> -->
         </div>
         <v-snackbar
             color="success"
@@ -23,6 +28,7 @@
                 </v-btn>
             </template>
         </v-snackbar>
+        <LSConfirm v-model="isShowConfirm" type="delete" @confirm="onConfirmOk"/> 
     </div>
 </template>
 
@@ -30,13 +36,25 @@
 import { RiDeleteBinLine, RiMoreFill } from '@remixicon/vue';
 import { useContentStore } from '../store/content';
 import { ref } from 'vue';
+import LSConfirm from '../Confirm/LSConfirm.vue';
+import moment from 'moment';
 const msg = ref<string>("");
 const isSuccess = ref<boolean>(false);
+const isShowConfirm = ref<boolean>(false);
 const content = useContentStore();
 const onDeleteNotes=async()=>{
-    isSuccess.value = await content.deleteNotes();
-    if(isSuccess) msg.value = "Notes deleted successfully!";
-    else msg.value = "Failed to delete notes.";
+    isShowConfirm.value = true;
+    // isSuccess.value = await content.deleteNotes();
+    // if(isSuccess) msg.value = "Notes deleted successfully!";
+    // else msg.value = "Failed to delete notes.";
+}
+const onConfirmOk=()=>{
+    isShowConfirm.value = false;
+    setTimeout(async()=>{
+        isSuccess.value = await content.deleteNotes();
+        if(isSuccess.value) msg.value = "Notes deleted successfully!";
+        else msg.value = "Failed to delete notes.";
+    },100)
 }
 const snackbar = ref<boolean>(true);
 </script>
