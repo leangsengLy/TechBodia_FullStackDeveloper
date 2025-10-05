@@ -1,7 +1,9 @@
 <template>
-    <div class="flex  " :class="[content.notes.content==undefined || content.notes.content=='' ? 'justify-center items-center' : 'p-5']">
+    <div class="flex  " :class="[content.notes.content==undefined || content.notes.content=='' ? 'justify-center items-center' : 'p-5 overflow-y-scroll']">
         <EmptyNotes v-if="content.notes.content==undefined || content.notes.content==''"/>
-        <div v-else>{{ content.notes.content }}</div>
+        <div v-else>
+            {{ content.notes.content }}
+        </div>
     </div>
 </template>
 

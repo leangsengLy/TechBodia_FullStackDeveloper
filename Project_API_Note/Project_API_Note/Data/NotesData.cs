@@ -10,13 +10,13 @@ namespace Project_API_Note.Data
     {
         public static async Task<List<NotesDto>> List(NotesFilterDataModel filter, ApplicationDbContext _db)
         {
-            var list = await _db.LSNOTEs.ToListAsync();
+            var list = await _db.LSNOTEs.OrderByDescending(s=>s.CREATED_AT).ToListAsync();
             if (!string.IsNullOrEmpty(filter.Search))
             {
                 var searchText = filter.Search.Trim();
                 list = list.Where(s => s.TITLE.Contains(searchText) || s.CONTENT.Contains(searchText)).ToList();
             }
-            list = list.Skip(filter.Pages - 1).Take(filter.Records).ToList();
+            //list = list.Skip(filter.Pages - 1).Take(filter.Records).ToList();
             if (!string.IsNullOrEmpty(filter.OrderBy))
             {
                 filter.OrderBy += !string.IsNullOrEmpty(filter.OrderDir) ? $@" {filter.OrderDir} " : "";

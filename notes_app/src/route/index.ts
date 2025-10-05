@@ -13,9 +13,9 @@ const routes: Array<RouteRecordRaw> = [
     component: Notes
   },
   {
-    path: '/app',
+    path: '/login',
     name: 'notes',
-    component: Notes
+    component: Login
   },
   {
     path: '/:pathMatch(.*)',

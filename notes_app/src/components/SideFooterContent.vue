@@ -1,7 +1,7 @@
 <template>
     <div class=" px-[25px] py-[20px]">
         <div class="w-full h-full bg-[#9696961f] rounded-[10px] flex items-center justify-center" >
-            <input type="text" @keydown="onKeyDownEnter" v-model="title" @focus="onFocusInput" :readonly="content.notes.title==undefined" placeholder="Type something..."  :class="[content.notes.title!==undefined ? 'cursor-text' : 'cursor-not-allowed']" class="w-full h-full  bg-[#dfdfdf00] outline-none rounded-[10px] pl-3"/>
+            <textarea type="text" @keydown="onKeyDownEnter" v-model="title" @focus="onFocusInput" :readonly="content.notes.title==undefined" placeholder="Type something..."  :class="[content.notes.title!==undefined ? 'cursor-text' : 'cursor-not-allowed']" class="w-full h-full  bg-[#dfdfdf00] pt-2 outline-none rounded-[10px] pl-3"/>
         </div>
     </div>
 </template>
@@ -17,7 +17,8 @@ const onFocusInput=(event: FocusEvent)=>{
     }
 }
 const onKeyDownEnter=(event: KeyboardEvent)=>{
-    if(event.key === "Enter" && content.notes.title!==undefined){
+    if(event.key === "Enter" && title.value.trim()!==""){
+        event.preventDefault();
         content.changeContent(content.notes.id,title.value);
         title.value = "";
         content.UpdateNotes();
