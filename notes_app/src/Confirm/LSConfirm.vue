@@ -1,7 +1,7 @@
 <template>
-   <v-dialog max-width="500" v-model="isShowPopup">
+   <v-dialog max-width="280" v-model="isShowPopup">
     <template v-slot:default="{ isActive }">
-        <v-card title="Dialog">
+        <v-card title="Confirm">
         <v-card-text>
             {{ typeConfirm=="create"?"Are you sure you want to create new notes?":"Are you sure you want to delete this notes?" }}
         </v-card-text>

@@ -7,18 +7,18 @@
                 <p class="text-[12px]" v-if="content.notes.title!=undefined">{{ moment().format('MMMM DD, YYYY') }}</p> 
             </div>
              <RiDeleteBinLine size="14" color="red" class="cursor-pointer mt-1" @click="onDeleteNotes" v-if="content.notes.title!=undefined"/>
-
+           
            
         </div>
         <div>
-            <!-- <RiMoreFill size="18" className="my-icon" /> -->
+              <RiLogoutCircleRLine size="18" class="cursor-pointer" @click="onLogout" />
         </div>
         <v-snackbar
             color="success"
             v-model="isSuccess"
         >
             {{ msg }}
-            <template v-slot:actions>
+            <!-- <template v-slot:actions>
                 <v-btn
                 color="pink"
                 variant="text"
@@ -26,22 +26,27 @@
                 >
                 Close
                 </v-btn>
-            </template>
+            </template> -->
         </v-snackbar>
         <LSConfirm v-model="isShowConfirm" type="delete" @confirm="onConfirmOk"/> 
     </div>
 </template>
 
 <script lang="ts" setup>
-import { RiDeleteBinLine, RiMoreFill } from '@remixicon/vue';
+import { RiDeleteBinLine, RiLogoutCircleRLine, RiMoreFill } from '@remixicon/vue';
 import { useContentStore } from '../store/content';
 import { ref } from 'vue';
 import LSConfirm from '../Confirm/LSConfirm.vue';
 import moment from 'moment';
+import { useRoute, useRouter } from 'vue-router';
 const msg = ref<string>("");
 const isSuccess = ref<boolean>(false);
 const isShowConfirm = ref<boolean>(false);
 const content = useContentStore();
+  const router = useRouter()
+const onLogout=()=>{
+    router.push('/login')
+}
 const onDeleteNotes=async()=>{
     isShowConfirm.value = true;
     // isSuccess.value = await content.deleteNotes();

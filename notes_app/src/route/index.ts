@@ -10,12 +10,17 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: 'Home',
-    component: Notes
+    component: Login
   },
   {
     path: '/login',
-    name: 'notes',
+    name: 'login',
     component: Login
+  },
+  {
+    path: '/note',
+    name: 'notes',
+    component: Notes
   },
   {
     path: '/:pathMatch(.*)',

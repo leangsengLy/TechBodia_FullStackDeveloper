@@ -62,15 +62,6 @@
             v-model="isSuccess"
         >
             {{ msg }}
-            <template v-slot:actions>
-                <v-btn
-                color="pink"
-                variant="text"
-                @click="isSuccess = false"
-                >
-                Close
-                </v-btn>
-            </template>
         </v-snackbar>
     </div>
 </template>
