@@ -1,12 +1,14 @@
-﻿using System.Net;
+﻿using Microsoft.AspNetCore.Mvc;
+using System.Net;
 using System.Runtime.CompilerServices;
 
 namespace Project_API_Note.ApiReponse
 {
-    public class LSApiResponse
+    public class LSApiResponse:ActionResult
     {
         public ApiResponse apiResponse { get; set; }
         public HttpStatusCode StatusCode { get; set; }
+        public ActionResult actionResult { get; set; }
 
         public  LSApiResponse(ApiResponse apiResponse ,HttpStatusCode statusCode) {
             this.apiResponse = apiResponse;

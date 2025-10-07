@@ -14,6 +14,7 @@
           <p class="text-[13px] text-[#019250]" v-if="!isSignup">Forget password?</p>
         </div>
         <div class="flex justify-center hover:opacity-80 bg-[#019250] text-white py-4 text-[16px] cursor-pointer rounded-lg items-center" @click="onClickContinues">
+          <span class="loading" v-if="isLoading"></span>
           Continues
         </div>
         <div class="flex justify-center flex-wrap items-center text-[13px]"><span>{{ isSignup?"Already have account?":"Don't have account?" }}</span> <span class="ml-2 text-[#019250] cursor-pointer" @click="onClickSignUp">{{isSignup?"Login":"Sign up"}}</span></div>
@@ -31,6 +32,7 @@
 import { useLoginStore } from '../../store/login';
 import { useRouter } from 'vue-router';
   const isSignup = ref<boolean>(false)
+  const isLoading = ref<boolean>(false)
   const email = ref<string>("");
   const confirmPassword = ref<string>("");
   const typeInput = ref<string>("password");
@@ -41,7 +43,7 @@ import { useRouter } from 'vue-router';
   const isFirstInputEmail = ref<boolean>(false);
   const isFirstInputPw = ref<boolean>(false);
   const isShowSnackbar = ref<boolean>(false);
-  const login = useLoginStore();
+  const login = useLoginStore();  
   const rules = ref({
   requiredEmail: (value: string) => {
     if(value=='' && (isFirstInputEmail.value)) return 'Email is required!';
@@ -81,34 +83,42 @@ const handleKeydown = async (event:KeyboardEvent)=>{
     }else {
       if(isSignup.value){
         if(password.value==confirmPassword.value) {
+           isLoading.value  = true;
           const result = await login.CreateSignUp(email.value,password.value);
-          color.value  = result ? "success":"error";
-          msg.value  = result ? "Login successfully.":"Your password is incorrect!";
+          console.log("check ",result?.data?.apiResponse?.detail)
+          color.value  = result?.data?.apiResponse?.detail!="" && result?.data?.apiResponse?.detail!=undefined? "error":"success";
+          msg.value  = result?.data?.apiResponse?.detail!="" && result?.data?.apiResponse?.detail!=undefined? result?.data?.apiResponse?.detail:"Create account successfully.";
           isShowSnackbar.value = true;
-          setTimeout(() => {
+          isLoading.value  = false;
+          if(!(result?.data?.apiResponse?.detail!="" && result?.data?.apiResponse?.detail!=undefined)){
+            setTimeout(() => {
               password.value = "";
               email.value = "";
               confirmPassword.value = "";
               isSignup.value = false;
           }, 3000);
           }
+          }
         else  {
             msg.value="Your password is difference with confirm password!"
             color.value="error";
             isShowSnackbar.value  = true;
         }
+        
       }else{
+        isLoading.value  = true;
          const result = await login.CreateSignUp(email.value,password.value,true);
          console.log("is success",result  )
-         color.value  = result ? "success":"error";
-         msg.value  = result ? "Login successfully.":"Your password is incorrect!";
+         color.value  = !result ? "error":"success";
+         msg.value  = result ? "login successfully.":"Your password is incorrect!";
          isShowSnackbar.value = true;
+         isLoading.value  = false;
         setTimeout(()=>{
            if(result) router.push('/note')
         },1000)
       }
     }
-   
+    
   }
   const onClickContinues=()=>{
     confirmDataToCreate();

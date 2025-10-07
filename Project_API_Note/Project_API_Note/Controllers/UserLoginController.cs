@@ -22,11 +22,16 @@ namespace Project_API_Note.Data
             {
                 if (string.IsNullOrEmpty(model.Email) && string.IsNullOrEmpty(model.Password))
                 {
-                    return Ok(new LSApiResponse(UserLoginHelper.Message.InvalidData, HttpStatusCode.BadRequest).SetDetail("Email or Password are required."));
+                    return StatusCode((int)HttpStatusCode.BadRequest,
+               new LSApiResponse(UserLoginHelper.Message.InvalidData, HttpStatusCode.BadRequest)
+                   .SetDetail("Email or Password are required."));
                 }
                 if (_db.LSUSER_LOGINs.Any(s => s.EMAIL == model.Email))
                 {
-                    return Ok(new LSApiResponse(UserLoginHelper.Message.EmailExisted, HttpStatusCode.BadRequest).SetDetail());
+                    return StatusCode((int)HttpStatusCode.BadRequest,
+                            new LSApiResponse(UserLoginHelper.Message.EmailExisted, HttpStatusCode.BadRequest)
+                                .SetDetail("Email already exists."));
+
                 }
                 var result = await UserLoginData.Register(model, _db);
                 return Ok(result);

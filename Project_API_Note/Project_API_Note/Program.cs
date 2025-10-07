@@ -1,8 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using Project_API_Note;
+using Project_API_Note.Jwt;
 
 var builder = WebApplication.CreateBuilder(args);
-
+builder.Services.AddTransient<JwtConfiguration>();
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -31,6 +32,10 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+//builder.Services.AddJwtAuthentication(builder.Configuration);
+app.UseAuthentication();
+app.UseAuthorization();
 
 app.UseAuthorization();
 app.UseCors("AllowAll");
