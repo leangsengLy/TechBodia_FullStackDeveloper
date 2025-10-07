@@ -3,12 +3,14 @@ using Microsoft.AspNetCore.Mvc;
 using Project_API_Note.Data;
 using Project_API_Note.DataModel;
 using Project_API_Note.Helper;
+using Project_API_Note.Jwt;
 
 namespace Project_API_Note.ApiController
 {
+    [ApiController]
     public class UserLoginApiController : UserLoginController
     {
-        public UserLoginApiController(ApplicationDbContext dbContext) : base(dbContext)
+        public UserLoginApiController(ApplicationDbContext dbContext, JwtTokenService jwt) : base(dbContext, jwt)
         {
         }
 

@@ -13,6 +13,9 @@ export const useLoginStore = defineStore("login", {
                     password: password,
                 });
                 console.log(response)
+                if(isLogin){
+                    document.cookie = `token=${response.data.token}`;
+                }
                 return response.data;
             } catch (err:any) {
                  console.log(err)

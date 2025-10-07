@@ -7,10 +7,12 @@ import { createVuetify } from 'vuetify'
 import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
 import './css/global.css';
+import { LSGetCookie } from './ultil/LSGlobal.ts'
 const vuetify = createVuetify({
   components,
   directives,
 })
+if(LSGetCookie("token")==null) router.push("/login")
 // import PrimeVue from 'primevue/config';
 
 // PrimeVue CSS

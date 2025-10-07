@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Project_API_Note.Data;
 using Project_API_Note.DataModel.Notes;
@@ -14,23 +15,27 @@ namespace Project_API_Note.ApiController
         }
        
         [HttpPost(NotesHelper.URL.List)]
+        [Authorize]
         public override Task<ActionResult> List(NotesFilterDataModel filter)
         {
             return base.List(filter);
         }
 
         [HttpPost(NotesHelper.URL.Create)]
+        [Authorize]
         public override  Task<ActionResult> Create(NotesDataModel model)
         {
             return base.Create(model);
         }
 
         [HttpPost(NotesHelper.URL.Update)]
+        [Authorize]
         public override Task<ActionResult> Update(NotesDataModel model)
         {
             return base.Update(model);
         }
         [HttpGet(NotesHelper.URL.Delete)]
+        [Authorize]
         public override Task<ActionResult> Delete(Guid id)
         {
             return base.Delete(id);

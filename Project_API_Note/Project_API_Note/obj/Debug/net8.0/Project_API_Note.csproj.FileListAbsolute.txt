@@ -278,3 +278,4 @@ D:\TechBodia_FullStackDeveloper\Project_API_Note\Project_API_Note\obj\Debug\net8
 D:\TechBodia_FullStackDeveloper\Project_API_Note\Project_API_Note\obj\Debug\net8.0\Project_API_Note.genruntimeconfig.cache
 D:\TechBodia_FullStackDeveloper\Project_API_Note\Project_API_Note\obj\Debug\net8.0\ref\Project_API_Note.dll
 D:\TechBodia_FullStackDeveloper\Project_API_Note\Project_API_Note\bin\Debug\net8.0\System.Linq.Dynamic.Core.dll
+D:\TechBodia_FullStackDeveloper\Project_API_Note\Project_API_Note\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

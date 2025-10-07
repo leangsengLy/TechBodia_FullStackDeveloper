@@ -45,7 +45,11 @@ const isShowConfirm = ref<boolean>(false);
 const content = useContentStore();
   const router = useRouter()
 const onLogout=()=>{
+    deleteCookie("token");
     router.push('/login')
+}
+const deleteCookie=(name:string, path = '/')=> {
+  document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=' + path + ';';
 }
 const onDeleteNotes=async()=>{
     isShowConfirm.value = true;

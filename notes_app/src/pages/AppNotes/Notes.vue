@@ -58,7 +58,7 @@
             <SideFooterContent/>
         </div>
            <v-snackbar
-            color="success"
+            :color="color"
             v-model="isSuccess"
         >
             {{ msg }}
@@ -70,14 +70,16 @@
 import { Ri24HoursFill, RiAddCircleFill, RiAddCircleLine, RiArrowLeftBoxFill, RiArrowLeftSFill, RiArrowRightSFill, RiFileTextLine } from '@remixicon/vue';
 import SideBodyContent from '../../components/SideBodyContent.vue';
 import SideFooterContent from '../../components/SideFooterContent.vue';
+import { LSGetCookie } from '../../ultil/LSGlobal'; 
 import SideHeaderContent from '../../components/SideHeaderContent.vue';
 import { useCounterStore } from '../../store/counter';
 import { useUIStore } from '../../store/ui_store';
-import { onMounted, ref, type HtmlHTMLAttributes } from 'vue';
+import { onBeforeMount, onMounted, ref, type HtmlHTMLAttributes } from 'vue';
 import LogoTechbo from '../../assets/Tecobodia_logo.jpg';
 import { useContentStore } from '../../store/content';
 import type Notes from "../../Type/TypeNotes";
 import axios from 'axios';
+import router from '../../route';
 const count = useCounterStore();
 const ui = useUIStore();
 const content = useContentStore();
@@ -85,6 +87,7 @@ const myInput = ref(null);
 const isShowPopup = ref<boolean>(false);
 const isSuccess = ref<boolean>();
 const title = ref<string>("");
+const color = ref<string>("");
 const error = ref<string>("");
 const msg = ref<string>("");
 const loading = ref<boolean>(false);
@@ -96,6 +99,7 @@ const selectContentTitle=(notes:Notes)=>{
 const AddNewTitle=async()=>{
     isSuccess.value = await content.setTitle(title.value);
     msg.value = getMessage(isSuccess.value);
+    color.value = isSuccess.value ? "success":"error";
     isShowPopup.value = false;
 }
 const getMessage = (isSuccess:boolean):string=>{
@@ -106,6 +110,7 @@ const handleKeydown = async (event:KeyboardEvent)=>{
          isShowPopup.value = false;
         isSuccess.value = await content.setTitle(title.value);
         msg.value = getMessage(isSuccess.value);
+        color.value = isSuccess.value ? "success":"error";
     }
 
 }
@@ -122,20 +127,45 @@ const onClearTitle=()=>{
 
 const fetchNotes = async () => {
     try {
-      const response = await axios.post("http://localhost:5246/api/notes/list", {});
+      const response = await axios.post("http://localhost:5246/api/notes/list", {},
+      {
+      headers: {
+        "Authorization": `Bearer ${LSGetCookie("token")}`, // attach token
+        "Content-Type": "application/json",
+      },
+    });
       notes.value = response.data;
-    } catch (err) {
+    } catch (err:any) {
       error.value = "Failed to fetch posts.";
-      
+      if (err.code === "ERR_NETWORK") { 
+      console.error("Network error — server unreachable or CORS issue");
+    } else if (err.response) {
+      console.error("Server responded:", err.response.status, err.response.data);
+    } else {
+      console.error("Unknown error:", err.message);
+    }
       console.error(err);
     } finally {
       loading.value = false;
     }
   };
 onMounted(async () => {
-//   fetchNotes();
-  content.getNotes();
+  var data = await content.getNotes();
+  console.log(data)
+  if(typeof data=='string'){
+     msg.value = data;
+     color.value = "warning";
+     isSuccess.value = true;
+  }
 });
+onBeforeMount(()=>{
+     if(LSGetCookie("token")==null) {
+        msg.value = "You are don't have permission here."
+        isSuccess.value = true;
+        color.value = "warning";
+        setTimeout(()=>{router.push("/login")},3000)
+     }
+}); 
 const addNewNotes=()=>{
     isShowPopup.value = true;
     title.value = "";
