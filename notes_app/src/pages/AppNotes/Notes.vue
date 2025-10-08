@@ -13,13 +13,16 @@
                 <RiArrowLeftSFill size="25" class="text-white my-icon cursor-pointer" v-if="!ui.isCloseCollapse" @click="onCLickCloseNavLeft"/>
                 <RiArrowRightSFill size="25" class="text-white my-icon cursor-pointer" v-else @click="onCLickCloseNavLeft"/>
             </div>
-            <div class="mt-4 grid grid-rows-[1fr_110px] h-full">
+            <div class="mt-4 grid grid-rows-[1fr_100px] h-full">
                 <div class="flex flex-col overflow-y-auto gap-y-2 flex-nowrap " :class="ui.isCloseCollapse?` w-[36px] `:``">
-                    <div v-for="item in content.list" :class="[content.notes.title==item.title?'text-green-400 font-bold':'text-white']" class=" cursor-pointer  items-center flex gap-x-2" @click="selectContentTitle(item)">
+                    <input v-model="search" class="bg-[#12312300] outline-none border-b-2 border-[#fcfcfc4e] text-white text-[14px] h-[40px] pl-1" @input="OnSearching" placeholder="Search.."/>
+                    <div v-if="content.list.length>0" v-for="item in content.list" :class="[content.notes.title==item.title && content.notes.id == item.id?'text-green-400 font-bold':'text-white']" class=" cursor-pointer  items-center flex gap-x-2" @click="selectContentTitle(item)">
                         <RiFileTextLine size="14"/>
                         <div class="text-[13px] whitespace-nowrap truncate-text " >{{ item.title }}</div>
                     </div>
-                    <Button label="Check" icon="pi pi-check" />
+                    <div v-else  class=" cursor-pointer justify-center items-center flex gap-x-2">
+                        no-data
+                    </div>
                 </div>
                <!-- <div>
                  <input type="text" v-if="!isShowTitle" v-model="title" placeholder="Your Title..." @keydown="onEnter" class="outline-none bg-[#a0a0a000] w-full h-[40px] text-white border-b-2"/>
@@ -27,10 +30,16 @@
                </div> -->
                  <v-dialog max-width="500" v-model="isShowPopup">
                     <template v-slot:activator="{ props: TestShow  }">
-                         <div v-bind="TestShow" class="flex text-white hover:opacity-70 text-[14px] gap-x-2 border cursor-pointer justify-center items-center rounded-lg h-[42px] " @click="addNewNotes">
-                            <RiAddCircleLine size="17"/> 
-                            <p v-if="!ui.isCloseCollapse"> Add new notes</p>
-                        </div>
+                        
+                         <div class="flex flex-col gap-y-3">
+                            <!-- <div class="flex text-white hover:opacity-70 text-[14px] gap-x-2 border cursor-pointer justify-center items-center rounded-lg h-[42px] " @click="showAllNotes">
+                                <p v-if="!ui.isCloseCollapse">All Notes</p>
+                            </div> -->
+                            <div v-bind="TestShow" class="flex text-white hover:opacity-70 text-[14px] gap-x-2 border cursor-pointer justify-center items-center rounded-lg h-[42px] " @click="addNewNotes">
+                                <RiAddCircleLine size="17"/> 
+                                <p v-if="!ui.isCloseCollapse"> Add new notes</p>
+                            </div>
+                         </div>
                     </template>
 
                     <template v-slot:default="{ TestShow }">
@@ -69,6 +78,7 @@
 <script lang="ts" setup>
 import { Ri24HoursFill, RiAddCircleFill, RiAddCircleLine, RiArrowLeftBoxFill, RiArrowLeftSFill, RiArrowRightSFill, RiFileTextLine } from '@remixicon/vue';
 import SideBodyContent from '../../components/SideBodyContent.vue';
+import type Filter from '../../Type/TypeNotes'
 import SideFooterContent from '../../components/SideFooterContent.vue';
 import { LSGetCookie } from '../../ultil/LSGlobal'; 
 import SideHeaderContent from '../../components/SideHeaderContent.vue';
@@ -89,12 +99,21 @@ const isSuccess = ref<boolean>();
 const title = ref<string>("");
 const color = ref<string>("");
 const error = ref<string>("");
+const search = ref<string>("");
 const msg = ref<string>("");
 const loading = ref<boolean>(false);
 const notes = ref<Notes[]>();
 const isShowTitle = ref<boolean>(false);
 const selectContentTitle=(notes:Notes)=>{
     content.setNote(notes);
+}
+var time = 1000;
+const OnSearching=()=>{
+    clearTimeout(time)
+    time = setTimeout(async() => {
+        content.setFilter({search:search.value} as Filter)
+        await content.getNotes();
+    }, 1000);
 }
 const AddNewTitle=async()=>{
     isSuccess.value = await content.setTitle(title.value);
@@ -169,10 +188,10 @@ onBeforeMount(()=>{
 const addNewNotes=()=>{
     isShowPopup.value = true;
     title.value = "";
-    setTimeout(() => {
-       console.log(myInput.value.focus());
-    }, 100);    
-    // isShowTitle.value = false;
+}
+const showAllNotes=async()=>{
+    content.setPageRecord(0,0)
+    await content.getNotes();
 }
 const onCLickCloseNavLeft=()=>{
     console.log("close nav left");
