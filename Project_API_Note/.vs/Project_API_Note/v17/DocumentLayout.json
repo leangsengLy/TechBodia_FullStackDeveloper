@@ -126,8 +126,7 @@
               "RelativeToolTip": "Project_API_Note\\Program.cs",
               "ViewState": "AgIAAE0AAAAAAAAAAAAswFwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-30T12:25:58.643Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-30T12:25:58.643Z"
             },
             {
               "$type": "Document",
@@ -139,8 +138,7 @@
               "RelativeToolTip": "Project_API_Note\\ApiController\\NotesApiController.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAuwBQAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-30T04:13:57.15Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-30T04:13:57.15Z"
             },
             {
               "$type": "Document",
@@ -165,8 +163,7 @@
               "RelativeToolTip": "Project_API_Note\\ApiController\\UserLoginApiController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-30T03:48:17.885Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-30T03:48:17.885Z"
             },
             {
               "$type": "Document",
@@ -178,8 +175,7 @@
               "RelativeToolTip": "Project_API_Note\\DataModel\\Notes\\NotesFilterDataModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-30T04:12:50.982Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-30T04:12:50.982Z"
             },
             {
               "$type": "Document",
@@ -191,8 +187,7 @@
               "RelativeToolTip": "Project_API_Note\\Data\\NotesData.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-30T04:15:03.133Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-30T04:15:03.133Z"
             },
             {
               "$type": "Document",
@@ -204,8 +199,7 @@
               "RelativeToolTip": "Project_API_Note\\Controllers\\UserLoginController.cs",
               "ViewState": "AgIAACkAAAAAAAAAAAAQwDUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-30T03:31:40.706Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-30T03:31:40.706Z"
             },
             {
               "$type": "Document",
@@ -217,8 +211,7 @@
               "RelativeToolTip": "Project_API_Note\\Jwt\\JwtTokenService.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAuwBEAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-07T13:20:10.727Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-07T13:20:10.727Z"
             },
             {
               "$type": "Document",

@@ -15,7 +15,7 @@
             </div>
             <div class="mt-4 grid grid-rows-[1fr_100px] h-full">
                 <div class="flex flex-col overflow-y-auto gap-y-2 flex-nowrap " :class="ui.isCloseCollapse?` w-[36px] `:``">
-                    <input v-model="search" class="bg-[#12312300] outline-none border-b-2 border-[#fcfcfc4e] text-white text-[14px] h-[40px] pl-1" @input="OnSearching" placeholder="Search.."/>
+                    <input v-model="search" class="bg-[#12312300] outline-none border-b-2 border-[#fcfcfc4e] text-white text-[14px] h-[40px] pl-1" @input="OnSearching" placeholder="Searching notes..."/>
                     <div v-if="content.list.length>0" v-for="item in content.list" :class="[content.notes.title==item.title && content.notes.id == item.id?'text-green-400 font-bold':'text-white']" class=" cursor-pointer  items-center flex gap-x-2" @click="selectContentTitle(item)">
                         <RiFileTextLine size="14"/>
                         <div class="text-[13px] whitespace-nowrap truncate-text " >{{ item.title }}</div>
