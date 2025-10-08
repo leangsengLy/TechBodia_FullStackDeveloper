@@ -14,9 +14,12 @@ namespace Project_API_Note.Data
             if (!string.IsNullOrEmpty(filter.Search))
             {
                 var searchText = filter.Search.Trim();
-                list = list.Where(s => s.TITLE.Contains(searchText) || s.CONTENT.Contains(searchText)).ToList();
+                list = list.Where(s => s.TITLE.ToLower().Contains(searchText) || s.CONTENT.ToLower().Contains(searchText)).ToList();
             }
-            //list = list.Skip(filter.Pages - 1).Take(filter.Records).ToList();
+            if(filter.Records>0 && filter.Pages > 0)
+            {
+                list = list.Skip(filter.Pages - 1).Take(filter.Records).ToList();
+            }
             if (!string.IsNullOrEmpty(filter.OrderBy))
             {
                 filter.OrderBy += !string.IsNullOrEmpty(filter.OrderDir) ? $@" {filter.OrderDir} " : "";

@@ -44,8 +44,37 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                         });
                         await context.Response.WriteAsync(result);
                     }
+                },
+                OnAuthenticationFailed = context =>
+                {
+                    Console.WriteLine("🔴 Authentication failed: " + context.Exception.Message);
+                    context.Response.StatusCode = StatusCodes.Status401Unauthorized;
+                    context.Response.ContentType = "application/json";
+                    var result = System.Text.Json.JsonSerializer.Serialize(new
+                    {
+                        status = 401,
+                        message = "Invalid or expired token"
+                    });
+                    return context.Response.WriteAsync(result);
+                },
+                OnForbidden = context =>
+                {
+                    Console.WriteLine("⛔ Forbidden: User has no access");
+                    context.Response.StatusCode = StatusCodes.Status403Forbidden;
+                    context.Response.ContentType = "application/json";
+                    var result = System.Text.Json.JsonSerializer.Serialize(new
+                    {
+                        status = 403,
+                        message = "Forbidden: You do not have permission"
+                    });
+                    return context.Response.WriteAsync(result);
                 }
+
             };
+
+
+
+
         });
 builder.Services.AddScoped<JwtTokenService>();
 builder.Services.AddAuthorization();
@@ -71,7 +100,11 @@ var app = builder.Build();
 
 // ✅ Enable auth middleware
 app.UseAuthentication();
-
+app.Use(async (context, next) =>
+{
+    context.Response.Headers["Referrer-Policy"] = "no-referrer";
+    await next();
+});
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -80,13 +113,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
+app.MapControllers();
 //builder.Services.AddJwtAuthentication(builder.Configuration);
 app.UseAuthentication();
 app.UseAuthorization();
-
-app.UseAuthorization();
 app.UseCors("AllowAll");
-app.MapControllers();
-
 app.Run();

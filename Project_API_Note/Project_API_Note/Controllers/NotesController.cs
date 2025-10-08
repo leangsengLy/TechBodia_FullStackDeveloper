@@ -19,8 +19,8 @@ namespace Project_API_Note.Data
         }
         public virtual async Task<ActionResult> List([FromBody] NotesFilterDataModel filter)
         {
-            filter.Records = filter.Records > 0 ? filter.Records : 10;
-            filter.Pages = filter.Pages > 0 ? filter.Pages : 1;
+            filter.Records = filter.Records == 0 ? filter.Records : 10;
+            filter.Pages = filter.Pages == 0 ? filter.Pages : 1;
             var result = await NotesData.List(filter, _db);
             return Ok(result);
         }

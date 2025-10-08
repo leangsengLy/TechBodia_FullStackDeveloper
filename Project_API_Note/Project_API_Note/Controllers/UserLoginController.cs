@@ -70,8 +70,7 @@ namespace Project_API_Note.Data
                     var token = _jwtTokenService.GenerateToken(claims);
                     return Ok(new { Token = token });
                 }
-                
-                return Unauthorized();
+                return Ok(false);
             }
             catch (Exception ex) {
                 return Ok(new LSApiResponse(UserLoginHelper.Message.InterServerError, HttpStatusCode.InternalServerError).SetDetail(ex));

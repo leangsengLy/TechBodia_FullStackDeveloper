@@ -1,12 +1,14 @@
 import { defineStore } from "pinia";
 import type Note from "../Type/TypeNotes";
+import type Filter from '../Type/TypeNotes';
 import axios from "axios";
 import { LSGetCookie } from "../ultil/LSGlobal";
 export const useContentStore = defineStore("content", {
     state:()=>({
         title:"" as string,
         notes : {} as Note,
-        list :[] as Note[]
+        list :[] as Note[],
+        filter:{} as Filter
     }),
     actions:{
         selectContent(title:string):void{
@@ -14,6 +16,13 @@ export const useContentStore = defineStore("content", {
         },
         setNote(notes:Note):void{
             this.notes=notes;
+        },
+        setFilter(filter : Filter){
+            this.filter = filter;
+        },
+        setPageRecord(page:number,record:number){
+            this.filter.page = page;
+            this.filter.record = record;
         },
         changeContent(id:string,content:string):void{
             var note = this.list.find((note:Note) => note.id === id);
@@ -23,7 +32,11 @@ export const useContentStore = defineStore("content", {
         },
         async getNotes(isCreate:boolean=false):Promise<any>{
             try {
-            const response = await axios.post("http://localhost:5246/api/notes/list", {},
+            const response = await axios.post("http://localhost:5246/api/notes/list", {
+                Search : this.filter.search,
+                Records : this.filter.record,
+                Pages  : this.filter.page
+            },
 
                 {
                     headers: {

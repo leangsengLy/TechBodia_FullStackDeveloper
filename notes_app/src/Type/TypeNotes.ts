@@ -5,3 +5,8 @@ export default interface TypeNotes {
   content: string;
   createdAt?: string; // optional field
 }
+export default interface Filter {
+  search?: string;
+  page?: number,
+  record?:number,
+}
